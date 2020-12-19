@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fse = require('fs-extra');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const TerserWebpackPlugin = require('terser-webpack-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 
 class RunAfterCompile {
@@ -56,7 +57,8 @@ if(currentTask == 'dev') {
                 }
             ]
         },
-        plugins: pages 
+        plugins: pages,
+        devtool: 'source-map' 
     }
 }
 
@@ -95,14 +97,14 @@ if(currentTask == 'build') {
             ]
         }, 
         plugins: pages.concat(
-            new MiniCssExtractPlugin({ filename: 'main.[chunkhash].css' }),
+            new MiniCssExtractPlugin({ filename: '[name].[chunkhash].css' }),
             new CleanWebpackPlugin({ cleanOnceBeforeBuildPatterns: ['**/*', '!CNAME'] }),
             new RunAfterCompile()
         ),
         optimization: {
             splitChunks: { chunks: 'all' },
             minimize: true,
-            minimizer: [ new CssMinimizerWebpackPlugin() ]
+            minimizer: [ new TerserWebpackPlugin(), new CssMinimizerWebpackPlugin() ]
         }
     }
 }
