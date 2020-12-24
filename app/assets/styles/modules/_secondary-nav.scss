@@ -1,3 +1,70 @@
 .secondary-nav {
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 1.5px;
+        background-color: $primaryLightColor;
+        position: absolute;
+        top: -16px;
+        left: 0;
+    }
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 1.5px;
+        background-color: $primaryLightColor;
+        position: absolute;
+        bottom: -13px;
+        left: 0;
+    }
     
+    a {
+        text-decoration: none;
+        font-size: (12rem / 16);
+        color: $primaryDarkColor;
+        display: inline-block;
+        height: 34px;
+        padding-top: 20px;
+        margin-right: 32px;
+        position: relative;
+
+        &:nth-last-of-type(1) {
+            margin-right: 0;
+        }
+
+        &::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__about {
+
+        &::before {
+            background: url('./assets/images/svgs/about.svg') no-repeat center center;
+        }
+    }
+
+    &__instagram {
+
+        &::before {
+            background: url('./assets/images/svgs/instagram.svg') no-repeat center center;
+        }
+    }
+
+    &__contact {
+
+        &::before {
+            background: url('./assets/images/svgs/contact.svg') no-repeat center center;
+        }
+    }
 }

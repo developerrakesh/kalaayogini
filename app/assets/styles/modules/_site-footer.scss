@@ -1,3 +1,9 @@
 .site-footer {
-    
+    margin-top: 56px;
+
+    &__copyright {
+        font-size: (9rem / 16);
+        line-height: 1.5;
+        margin: 17px 0 8px;
+    }
 }

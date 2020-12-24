@@ -1,4 +1,12 @@
 .page-section {
     margin-top: 16px;
     margin-bottom: 40px;
+
+    &--t-margin-medium {
+        margin-top: 32px;
+
+        @include smallScreen {
+            margin-top: 48px;
+        }
+    }
 }

@@ -1,0 +1,11 @@
+@mixin smallScreen {
+    @media (min-width: 448px) {
+        @content;
+    }
+}
+
+@mixin mediumScreen {
+    @media (min-width: 768px) {
+        @content;
+    }
+}

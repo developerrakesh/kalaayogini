@@ -1,5 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Quicksand', sans-serif;
     background-color: $primaryExtraLightColor;
     color: $primaryExtraDarkColor;
+}
+
+h1, h2, h3, h4 {
+    color: $primaryDarkColor;
+    font-size: (18rem / 16);
+    font-weight: normal;
+    margin: 0 0 16px 0;
+    line-height: 1.5;
+
+    @include smallScreen {
+        font-size: (32rem / 16);
+        margin: 0 0 40px 0;
+    }
 }

@@ -1,3 +1,34 @@
 .product-card {
-    
+    border-radius: 8px;
+    overflow: hidden;
+    display: inline-block;
+    background-color: $primaryUltraLightColor;
+    padding-bottom: 10px;
+    max-width: 325px;
+    width: 44vw;
+
+    &:nth-last-of-type(1) {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__title {
+        font-size: calc(14rem / 16);
+        text-align: left;
+        font-weight: 500;
+        color: $primaryExtraDarkColor;
+        margin: 4px 8px;
+        line-height: 1.2;
+    }
+
+    &__price {
+        text-align: left;
+        font-size: calc(14rem / 16);
+        color: $primaryExtraDarkColor;
+        margin: 0 8px;
+    }
 }
