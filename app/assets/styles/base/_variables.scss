@@ -7,6 +7,8 @@ $primaryExtraDarkColor: hsl($hue1, 90%, 11%); //#032735 - for normal fonts
 $primaryLightColor: hsl($hue1, 25%, 88%);  //#d9e4e8
 $primaryExtraLightColor: hsl($hue1, 22%, 92%);  //#e6edef
 $primaryUltraLightColor: hsl($hue1, 25%, 96%);  //#f2f6f7
+$modalOverlayColor: hsla($hue1, 17%, 21%, .8); //#2c383e
+$hoverTextColor: #D47F00;
 
 $headerHeightSmall: 48px;
 $headerHeightMedium: 56px;

@@ -162,9 +162,11 @@
             padding: 0 24px;
         }
 
-        a {
-            text-decoration: none;
+        li {
             border-bottom: 1.5px solid $primaryLightColor;
+        }
+
+        a {
             display: inline-block;
         }
 
@@ -173,6 +175,12 @@
             color: $primaryDarkColor;
             line-height: 55px;
             text-align: center;
+            cursor: pointer;
+            transition: all .2s ease-out;
+
+            &:hover, &:focus {
+                color: $hoverTextColor;
+            }
 
             @include smallScreen {
                 font-size: (24rem / 16);

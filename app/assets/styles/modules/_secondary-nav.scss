@@ -4,27 +4,8 @@
     padding-bottom: 11.5px;
     border-top: 1.5px solid $primaryLightColor;
     border-bottom: 1.5px solid $primaryLightColor;
-
-    &::before {
-        width: 100%;
-        height: 1.5px;
-        background-color: $primaryLightColor;
-        position: absolute;
-        top: -16px;
-        left: 0;
-    }
-
-    &::after {
-        width: 100%;
-        height: 1.5px;
-        background-color: $primaryLightColor;
-        position: absolute;
-        bottom: -13px;
-        left: 0;
-    }
     
     a {
-        text-decoration: none;
         font-size: (12rem / 16);
         color: $primaryDarkColor;
         display: inline-block;
@@ -32,6 +13,7 @@
         padding-top: 20px;
         margin-right: 32px;
         position: relative;
+        transition: color .2s ease-out;
 
         @include smallScreen {
             font-size: (14rem / 16);
@@ -62,9 +44,10 @@
         }
 
         &:hover, &:focus {
+            color: $hoverTextColor;
             
             &::before {
-                transform: scale(1.2) translateY(-2px);
+                transform: scale(1.3) translateY(-2px);
             }
         }
     }
