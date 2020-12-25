@@ -1,13 +1,15 @@
 
-//Color Paletes 
-$hue1: 197;
-$primaryColor: hsl($hue1, 34%, 64%); //#84b1c2
-$primaryDarkColor: hsl($hue1, 97%, 25%); //#02587b - 
-$primaryExtraDarkColor: hsl($hue1, 90%, 11%); //#032735 - for normal fonts
-$primaryLightColor: hsl($hue1, 25%, 88%);  //#d9e4e8
-$primaryExtraLightColor: hsl($hue1, 22%, 92%);  //#e6edef
-$primaryUltraLightColor: hsl($hue1, 25%, 96%);  //#f2f6f7
-$modalOverlayColor: hsla($hue1, 17%, 21%, .8); //#2c383e
+//Color Paletes hue1: 197, hue2: 360
+:root {
+    --hue: 197;
+}
+$primaryColor: hsl(var(--hue), 34%, 64%); //#84b1c2
+$primaryDarkColor: hsl(var(--hue), 97%, 25%); //#02587b - 
+$primaryExtraDarkColor: hsl(var(--hue), 90%, 11%); //#032735 - for normal fonts
+$primaryLightColor: hsl(var(--hue), 25%, 88%);  //#d9e4e8
+$primaryExtraLightColor: hsl(var(--hue), 22%, 92%);  //#e6edef
+$primaryUltraLightColor: hsl(var(--hue), 25%, 96%);  //#f2f6f7
+$modalOverlayColor: hsla(var(--hue), 17%, 21%, .8); //#2c383e
 $hoverTextColor: #D47F00;
 
 $headerHeightSmall: 48px;

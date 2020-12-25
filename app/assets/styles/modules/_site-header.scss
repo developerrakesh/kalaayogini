@@ -25,6 +25,7 @@
         }
         
         svg {
+            fill: $primaryDarkColor;
             height: 24px;
 
             @include smallScreen {
@@ -168,6 +169,12 @@
 
         a {
             display: inline-block;
+            cursor: pointer;
+            transition: all .2s ease-out;
+
+            &:hover, &:focus {
+                color: $hoverTextColor;
+            }
         }
 
         li, a {
@@ -175,16 +182,65 @@
             color: $primaryDarkColor;
             line-height: 55px;
             text-align: center;
-            cursor: pointer;
-            transition: all .2s ease-out;
-
-            &:hover, &:focus {
-                color: $hoverTextColor;
-            }
 
             @include smallScreen {
                 font-size: (24rem / 16);
                 line-height: 78px;
+            }
+        }
+
+        &__toggle-btn {
+            display: inline-block;
+            border: none;
+            width: 24px;
+            height: 15px;
+            border-radius: 7.5px;
+            background-color: $primaryColor;
+            margin-left: 10px;
+            position: relative;
+            cursor: pointer;
+            top: -5px;
+
+            @include smallScreen {
+                width: 32px;
+                height: 20px;
+                border-radius: 10px;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &::after {
+                content: '';
+                width: 12px;
+                height: 12px;
+                display: inline-block;
+                background-color: $primaryDarkColor;
+                border-radius: 50%;
+                position: absolute;
+                top: 1.5px;
+                left: 1.5px;
+                transition: all .2s ease-out;
+
+                @include smallScreen {
+                    width: 16px;
+                    height: 16px;
+                    top: 2px;
+                    left: 2px;
+                }
+            }
+
+            &--on {
+
+                &::after {
+                    left: auto;
+                    right: 1.5px;
+
+                    @include smallScreen {
+                        right: 2px;
+                    }
+                }
             }
         }
     }

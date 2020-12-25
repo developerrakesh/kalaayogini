@@ -1,7 +1,6 @@
 class Modal {
     constructor() {
         this.insertModal();
-        this.openModal();
     }
 
     insertModal() {
