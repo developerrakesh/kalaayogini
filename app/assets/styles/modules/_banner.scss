@@ -1,11 +1,22 @@
 .banner {
-    margin-top: $headerHeight;
+    margin-top: $headerHeightSmall;
     padding-top: 1px;
     height: 345px;
     position: relative;
     background: rgba(255, 255, 255, .8) url('./assets/images/banner__bg--small.jpg') no-repeat center center fixed;
     background-blend-mode: lighten;
     background-size: cover;
+
+    @include smallScreen {
+        margin-top: $headerHeightMedium;
+        height: 480px;
+    }
+
+    @include largeScreen {
+        margin-top: $headerHeightLarge;
+        min-height: 400px;
+        height: calc(100vh - var(--headerHeightLarge));
+    }
 
     &::after {
         content: '';
@@ -15,6 +26,10 @@
         position: absolute;
         bottom: 0;
         background-image: linear-gradient(to bottom, rgba($primaryExtraLightColor, 0%), rgba($primaryExtraLightColor, 100%));
+
+        @include smallScreen {
+            height: 83px;
+        }
     }
     
     &__title {
@@ -33,6 +48,10 @@
 
             @include smallScreen {
                 font-size: (40rem / 16);
+            }
+
+            @include largeScreen {
+                font-size: (64rem / 16);
             }
         }
     }

@@ -7,8 +7,20 @@
     max-width: 325px;
     width: 44vw;
 
+    @include smallScreen {
+        padding-bottom: 14px;
+    }
+
+    @include semiLargeScreen {
+        padding-bottom: 22px;
+    }
+
     &:nth-last-of-type(1) {
         display: none;
+
+        @include mediumScreen {
+            display: inline-block;
+        }
     }
 
     img {
@@ -17,12 +29,22 @@
     }
 
     &__title {
-        font-size: calc(14rem / 16);
+        font-size: (14rem / 16);
         text-align: left;
         font-weight: 500;
         color: $primaryExtraDarkColor;
         margin: 4px 8px;
         line-height: 1.2;
+
+        @include smallScreen {
+            font-size: (18rem / 16);
+            margin: 8px 16px;
+        }
+
+        @include semiLargeScreen {
+            font-size: (22rem / 16);
+            margin: 12px 23px;
+        }
     }
 
     &__price {
@@ -30,5 +52,16 @@
         font-size: calc(14rem / 16);
         color: $primaryExtraDarkColor;
         margin: 0 8px;
+        line-height: 1.2;
+
+        @include smallScreen {
+            font-size: (18rem / 16);
+            margin: 0 16px;
+        }
+
+        @include semiLargeScreen {
+            font-size: (22rem / 16);
+            margin: 0 23px;
+        }
     }
 }

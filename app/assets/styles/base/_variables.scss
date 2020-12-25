@@ -8,7 +8,15 @@ $primaryLightColor: hsl($hue1, 25%, 88%);  //#d9e4e8
 $primaryExtraLightColor: hsl($hue1, 22%, 92%);  //#e6edef
 $primaryUltraLightColor: hsl($hue1, 25%, 96%);  //#f2f6f7
 
-$headerHeight: 48px;
+$headerHeightSmall: 48px;
+$headerHeightMedium: 56px;
+$headerHeightLarge: 60px;
+:root {
+    --headerHeightLarge: 60px;
+}
+
+$menuWidthSmall: 19.5px;
+$menuWidth: 24px;
 
 
 

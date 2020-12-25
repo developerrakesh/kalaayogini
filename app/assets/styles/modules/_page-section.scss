@@ -2,6 +2,15 @@
     margin-top: 16px;
     margin-bottom: 40px;
 
+    @include smallScreen {
+        margin-top: 32px;
+        margin-bottom: 65px;
+    }
+
+    @include largeScreen {
+        margin-bottom: 84px;
+    }
+
     &--t-margin-medium {
         margin-top: 32px;
 

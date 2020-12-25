@@ -19,4 +19,8 @@ h1, h2, h3, h4 {
         font-size: (32rem / 16);
         margin: 0 0 40px 0;
     }
+
+    @include largeScreen {
+        font-size: (48rem / 16);
+    }
 }

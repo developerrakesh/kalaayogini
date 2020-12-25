@@ -1,9 +1,17 @@
 .site-footer {
-    margin-top: 56px;
 
     &__copyright {
         font-size: (9rem / 16);
         line-height: 1.5;
-        margin: 17px 0 8px;
+        margin: 4px 0 8px;
+
+        @include smallScreen {
+            font-size: (12rem / 16);
+            margin: 12px 0 16px;
+        }
+
+        @include largeScreen {
+            margin-bottom: 21px;
+        }
     }
 }
