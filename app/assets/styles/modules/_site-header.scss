@@ -274,7 +274,7 @@
                 position: absolute;
                 top: 1.5px;
                 transform: translateX(-10px);
-                transition: all .3s ease-out;
+                transition: all .2s ease-out;
                 
                 @include smallScreen {
                     width: 16px;
