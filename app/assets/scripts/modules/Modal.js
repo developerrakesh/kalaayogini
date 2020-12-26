@@ -9,7 +9,7 @@ class Modal {
 
     insertModal() {
         document.body.insertAdjacentHTML('beforeend', `
-        <div class="modal wrapper wrapper--center-children" role="region" aria-modal="true">
+        <div class="modal wrapper wrapper--center-children" role="dailog" aria-modal="true">
             <form class="modal__form">
                 <div class="modal__close" role="button" aria-label="close modal button"><img src="assets/images/svgs/x.svg" width="16" height="16" alt="close"></div>
                 <h2 class="modal__title">Contact Us</h2>

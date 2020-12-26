@@ -20,10 +20,11 @@ class MobileMenu {
     }
 
     changeNavPosition() {
+        
         if(this.browserHeight < 400) {
-            this.header.style.position = 'absolute';
+            this.header.classList.add('site-header--small-height-screen')
         } else {
-            this.header.style.position = 'fixed';
+            this.header.classList.remove('site-header--small-height-screen')
         }
     }
 

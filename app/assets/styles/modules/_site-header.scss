@@ -7,19 +7,32 @@
     top: 0;
     left: 0;
     right: 0;
-
+    
     @include smallScreen {
         height: $headerHeightMedium;
     }
-
+    
     @include largeScreen {
         height: $headerHeightLarge;
     }
-
+    
+    &--small-height-screen {
+        position: relative;
+        margin-bottom: -$headerHeightSmall;
+        
+        @include smallScreen {
+            margin-bottom: -$headerHeightMedium;
+        }
+        
+        @include largeScreen {
+            margin-bottom: -$headerHeightLarge;
+        }
+    }
+    
     &__logo {
         margin-top: 4px;
         margin-left: -8px;
-
+        
         a {
             display: inline-block;
         }
@@ -27,7 +40,7 @@
         svg {
             fill: $primaryDarkColor;
             height: 24px;
-
+            
             @include smallScreen {
                 height: 36px;
             }
@@ -41,7 +54,7 @@
         cursor: pointer;
         display: flex;
         align-items: center;
-
+        
         @include smallScreen {
             height: 18px;
             width: $menuWidth;
@@ -53,7 +66,7 @@
             background-color: $primaryDarkColor;
             transition: transform .3s ease-out;
             pointer-events: none;
-
+            
             @include smallScreen {
                 width: $menuWidth;
             }
@@ -70,7 +83,7 @@
             transform-origin: 0 0;
             transition: transform .3s ease-out;
             pointer-events: none;
-
+            
             @include smallScreen {
                 width: $menuWidth;
             }
@@ -87,7 +100,7 @@
             transform-origin: 0 100%;
             transition: transform .3s ease-out;
             pointer-events: none;
-
+            
             @include smallScreen {
                 width: $menuWidth;
             }
@@ -98,18 +111,18 @@
             > div {
                 transform: scale(0);
             }
-
+            
             &::before {
                 transform: rotate(45deg) scaleX(1.07);
-
+                
                 @include smallScreen {
                     transform: rotate(43deg);
                 }
             }
-
+            
             &::after {
                 transform: rotate(-45deg) scaleX(1.07);
-
+                
                 @include smallScreen {
                     transform: rotate(-43deg);
                 }
@@ -120,75 +133,110 @@
     &__nav {
         position: absolute;
         top: $headerHeightSmall + 16px;
-        right: -148px;
-        background-color: $primaryExtraLightColor;
-        border-radius: 8px;
-        box-shadow: 0 1px 8px 0 rgba(0, 0, 0, .25);
-        opacity: 0;
+        right: 0;
         pointer-events: none;
-        transition: all .3s ease-out;
+        z-index: 5;
+        width: (150px + $extraSmallScreenVerticalPadding);
+        height: 241px;
+        overflow-x: hidden;
 
         @include smallScreen {
-            top: $headerHeightMedium + 16px;
+            height: 334px;
+            width: 223px;
         }
 
         @include largeScreen {
-            top: $headerHeightLarge + 19px;
-            right: 6vw;
-            transform: scale(.8);
-            transition: all .2s ease-out;
+            width: 280px;
         }
-
-        &--show {
-            opacity: 1;
-            pointer-events: all;
-            transform: translateX(-172px);
-
-            @include smallScreen {
-                transform: translateX(-192px);
-            }
-
-            @include mediumScreen {
-                transform: translateX(-210px);
-            }
-
-            @include largeScreen {
-                transform: translateX(0) scale(1);
-            }
-        }
-
+        
         ul {
             list-style: none;
             margin: 0;
             padding: 0 24px;
-        }
+            position: absolute;
+            top: 8px;
+            opacity: 0;
+            right: -148px;
+            transition: all .3s ease-out;
+            background-color: $primaryExtraLightColor;
+            border-radius: 8px;
+            box-shadow: 0 1px 8px 0 rgba(0, 0, 0, .25);
 
+            @include smallScreen {
+                right: -174px;
+            }
+
+            @include largeScreen {
+                right: 6vw;
+                transform: scale(.8);
+                transition: all .2s ease-out;
+            }
+        }
+        
+        @include smallScreen {
+            top: $headerHeightMedium + 16px;
+        }
+        
+        @include largeScreen {
+            top: $headerHeightLarge + 19px;
+        }
+        
+        &--show {
+            pointer-events: all;
+            
+            ul {
+                opacity: 1;
+                transform: translateX(-148px - $extraSmallScreenVerticalPadding);
+            }
+            
+            @include smallScreen {
+
+                ul {
+                    transform: translateX(-192px);
+                }
+            }
+            
+            @include mediumScreen {
+
+                ul {
+                    transform: translateX(-210px);
+                }
+            }
+            
+            @include largeScreen {
+
+                ul {
+                    transform: translateX(0) scale(1);
+                }
+            }
+        }
+        
         li {
             border-bottom: 1.5px solid $primaryLightColor;
         }
-
+        
         a {
             display: inline-block;
             cursor: pointer;
             transition: all .2s ease-out;
-
+            
             &:hover, &:focus {
                 color: $hoverTextColor;
             }
         }
-
+        
         li, a {
             font-size: (18rem / 16);
             color: $primaryDarkColor;
             line-height: 55px;
             text-align: center;
-
+            
             @include smallScreen {
                 font-size: (24rem / 16);
                 line-height: 78px;
             }
         }
-
+        
         &__toggle-btn {
             display: inline-block;
             border: none;
@@ -200,17 +248,17 @@
             position: relative;
             cursor: pointer;
             top: -5px;
-
+            
             @include smallScreen {
                 width: 32px;
                 height: 20px;
                 border-radius: 10px;
             }
-
+            
             &:focus {
                 outline: none;
             }
-
+            
             &::after {
                 content: '';
                 width: 12px;
@@ -222,7 +270,7 @@
                 top: 1.5px;
                 left: 1.5px;
                 transition: all .2s ease-out;
-
+                
                 @include smallScreen {
                     width: 16px;
                     height: 16px;
@@ -230,13 +278,13 @@
                     left: 2px;
                 }
             }
-
+            
             &--on {
-
+                
                 &::after {
                     left: auto;
                     right: 1.5px;
-
+                    
                     @include smallScreen {
                         right: 2px;
                     }
