@@ -32,6 +32,10 @@
     &__logo {
         margin-top: 4px;
         margin-left: -8px;
+
+        &:focus {
+            outline: none;
+        }
         
         a {
             display: inline-block;
@@ -156,6 +160,7 @@
             position: absolute;
             top: 8px;
             opacity: 0;
+            pointer-events: none;
             right: -148px;
             transition: all .3s ease-out;
             background-color: $primaryExtraLightColor;
@@ -182,9 +187,9 @@
         }
         
         &--show {
-            pointer-events: all;
             
             ul {
+                pointer-events: all;
                 opacity: 1;
                 transform: translateX(-148px - $extraSmallScreenVerticalPadding);
             }
@@ -268,14 +273,14 @@
                 border-radius: 50%;
                 position: absolute;
                 top: 1.5px;
-                left: 1.5px;
-                transition: all .2s ease-out;
+                transform: translateX(-10px);
+                transition: all .3s ease-out;
                 
                 @include smallScreen {
                     width: 16px;
                     height: 16px;
                     top: 2px;
-                    left: 2px;
+                    transform: translateX(-14px);
                 }
             }
             
@@ -283,11 +288,7 @@
                 
                 &::after {
                     left: auto;
-                    right: 1.5px;
-                    
-                    @include smallScreen {
-                        right: 2px;
-                    }
+                    transform: translateX(-2px);
                 }
             }
         }

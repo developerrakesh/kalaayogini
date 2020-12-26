@@ -1,8 +1,13 @@
-
-//Color Paletes hue1: 197, hue2: 360
 :root {
     --hue: 197;
+    transition: all 1s ease-out;
+
+    &.change-hue {
+        --hue: 360;
+    }
 }
+
+//Color Paletes
 $primaryColor: hsl(var(--hue), 34%, 64%); //#84b1c2
 $primaryDarkColor: hsl(var(--hue), 97%, 25%); //#02587b - 
 $primaryExtraDarkColor: hsl(var(--hue), 90%, 11%); //#032735 - for normal fonts

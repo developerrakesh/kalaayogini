@@ -25,51 +25,29 @@
             margin-right: 0;
         }
 
-        &::before {
-            content: '';
-            width: 16px;
-            height: 16px;
-            display: inline-block;
+        svg {
+            fill: $primaryDarkColor;
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             margin: 0 auto;
-            transition: transform .2s ease-out;
+            transition: all .2s ease-out;
 
             @include smallScreen {
-                width: 24px;
-                height: 24px;
+                width: 20px;
+                height: 20px;
+                top: -2px;
             }
         }
 
         &:hover, &:focus {
             color: $hoverTextColor;
-            
-            &::before {
+
+            svg {
+                fill: $hoverTextColor;
                 transform: scale(1.3) translateY(-2px);
             }
-        }
-    }
-
-    &__about {
-
-        &::before {
-            background: url('./assets/images/svgs/about.svg') no-repeat center center;
-        }
-    }
-
-    &__instagram {
-
-        &::before {
-            background: url('./assets/images/svgs/instagram.svg') no-repeat center center;
-        }
-    }
-
-    &__contact {
-
-        &::before {
-            background: url('./assets/images/svgs/contact.svg') no-repeat center center;
         }
     }
 }

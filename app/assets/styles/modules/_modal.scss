@@ -47,21 +47,20 @@
     
     &__close {
         position: absolute;
+        color: $primaryDarkColor;
         top: 16px;
         right: 16px;
+        font-size: 1.3rem;
+        font-weight: bold;
         cursor: pointer;
-        width: 16px;
-        height: 16px;
         transition: transform .2s ease-out;
 
         @include mediumScreen {
-            width: 18px;
-            height: 18px;
+            font-size: 1.4rem;
         }
         
         @include largeScreen {
-            width: 20px;
-            height: 20px;
+            font-size: 1.5rem;
         }
         
         &:hover, &:focus {
