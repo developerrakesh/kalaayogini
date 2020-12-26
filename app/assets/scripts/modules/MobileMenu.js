@@ -20,7 +20,6 @@ class MobileMenu {
     }
 
     changeNavPosition() {
-        
         if(this.browserHeight < 400) {
             this.header.classList.add('site-header--small-height-screen')
         } else {
@@ -36,6 +35,11 @@ class MobileMenu {
         document.addEventListener('click', evt => {
             //to check if nav menu is clicked or not
             if(!(evt.target.matches('.site-header__menu-icon') || evt.target.matches('.site-header__nav') || evt.target.matches('.site-header__nav ul') || evt.target.matches('.site-header__nav li') || evt.target.matches('.site-header__nav a') || evt.target.matches('.site-header__nav__toggle-btn'))) {
+                this.closeNav();
+            }
+        });
+        window.addEventListener('keyup', evt => {
+            if(evt.keyCode == 27) {
                 this.closeNav();
             }
         });

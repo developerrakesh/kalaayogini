@@ -7,6 +7,7 @@
     top: 0;
     left: 0;
     right: 0;
+    transition: all .3s ease-out;
     
     @include smallScreen {
         height: $headerHeightMedium;
@@ -49,7 +50,7 @@
     
     &__menu-icon {
         height: 16px;
-        width: $menuWidthSmall;
+        width: $menuIconWidthSmall;
         position: relative;
         cursor: pointer;
         display: flex;
@@ -57,25 +58,25 @@
         
         @include smallScreen {
             height: 18px;
-            width: $menuWidth;
+            width: $menuIconWidth;
         }
         
         > div {
-            width: $menuWidthSmall;
+            width: $menuIconWidthSmall;
             height: 2px;
             background-color: $primaryDarkColor;
             transition: transform .3s ease-out;
             pointer-events: none;
             
             @include smallScreen {
-                width: $menuWidth;
+                width: $menuIconWidth;
             }
         }
         
         &::before {
             content: '';
             display: inline-block;
-            width: $menuWidthSmall;
+            width: $menuIconWidthSmall;
             height: 2px;
             background-color: $primaryDarkColor;
             position: absolute;
@@ -85,14 +86,14 @@
             pointer-events: none;
             
             @include smallScreen {
-                width: $menuWidth;
+                width: $menuIconWidth;
             }
         }
         
         &::after {
             content: '';
             display: inline-block;
-            width: $menuWidthSmall;
+            width: $menuIconWidthSmall;
             height: 2px;
             background-color: $primaryDarkColor;
             position: absolute;
@@ -102,7 +103,7 @@
             pointer-events: none;
             
             @include smallScreen {
-                width: $menuWidth;
+                width: $menuIconWidth;
             }
         }
         
