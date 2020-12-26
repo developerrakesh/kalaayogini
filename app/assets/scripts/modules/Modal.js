@@ -9,10 +9,10 @@ class Modal {
 
     insertModal() {
         document.body.insertAdjacentHTML('beforeend', `
-        <div class="modal wrapper wrapper--center-children" role="dailog" aria-modal="true">
+        <div class="modal wrapper wrapper--center-children" aria-labelledby="contactTitle">
             <form class="modal__form">
                 <div class="modal__close" role="button" aria-label="close modal button"><img src="assets/images/svgs/x.svg" width="16" height="16" alt="close"></div>
-                <h2 class="modal__title">Contact Us</h2>
+                <h2 class="modal__title" id="contactTitle">Contact Us</h2>
                 <p class="modal__msg">Please leave us a message and we will reach out to you.</p>
                 <fieldset class="modal__user-input">
                     <input type="text" name="name" id="name" required placeholder="Name" aria-label="name">
