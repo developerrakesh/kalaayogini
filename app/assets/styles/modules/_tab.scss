@@ -1,0 +1,47 @@
+.tab {
+    margin-top: ($headerHeightSmall + 16px);
+    
+    @include smallScreen {
+        margin-top: $headerHeightMedium;
+    }
+    
+    @include largeScreen {
+        margin-top: $headerHeightLarge;
+    }
+    
+    
+    &__header {
+        list-style: none;
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        
+        &__li {
+            display: inline-block;
+        }
+        
+        &__title {
+            display: inline-block;
+            font-size: (12rem / 16);
+            line-height: 36px;
+            font-weight: 500;
+            color: $primaryColor;
+            border-radius: 4px;
+            padding: 0 12px;
+            transition: all $duration ease-out;
+
+            &.active {
+                color: $primaryDarkColor;
+                background-color: $primaryLightColor;
+            }
+        }
+    }
+
+    &__content {
+
+        &__pane {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+}

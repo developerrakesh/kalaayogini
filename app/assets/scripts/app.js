@@ -2,9 +2,11 @@ import '../styles/main.scss';
 import 'lazysizes';
 import MobileMenu from './modules/MobileMenu';
 import ThemeChanger from './modules/ThemeChanger';
+import Tabs from './modules/Tabs';
 
 new MobileMenu();
 new ThemeChanger();
+new Tabs();
 const contactBtns = document.querySelectorAll('.contact-btn');
 
 let modal;
