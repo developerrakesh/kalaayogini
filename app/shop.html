@@ -43,7 +43,7 @@
     <main class="tab">
         <ul class="tab__header wrapper page-section page-section--b-margin-only" role="tablist">
             <li class="tab__header__li" role="presentation">
-                <a href="#originals" id="originalsTab" data-test="hi" class="tab__header__title" role="tab" aria-controls="originals">Originals</a>
+                <a href="#originals" id="originalsTab" class="tab__header__title" role="tab" aria-controls="originals">Originals</a>
             </li>
             <li class="tab__header__li" role="presentation">
                 <a href="#prints" id="printsTab" class="tab__header__title active" role="tab" aria-controls="prints">Prints</a>
@@ -53,10 +53,172 @@
             </li>
         </ul>
 
-        <div class="tab__content wrapper">
-            <div id="originals" class="tab__content__pane tab__content__pane--originals" role="tabpanel" aria-labelledby="originalsTab">original content here</div>
-            <div id="prints" class="tab__content__pane tab__content__pane--prints" role="tabpanel" aria-labelledby="printsTab">print content here</div>
-            <div id="downloads" class="tab__content__pane tab__content__pane--downloads" role="tabpanel" aria-labelledby="downloadsTab">download content here</div>
+        <div class="tab__content wrapper page-section page-section--b-large-margin-only">
+            <div id="originals" class="tab__content__pane" role="tabpanel" aria-labelledby="originalsTab">
+                <div class="row row--smallscreen-2-column row--mediumscreen-3-column row--extralargescreen-4-column">     
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/guru-paduka--small.jpg 348w, assets/images/guru-paduka--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/guru-paduka--extra-small.jpg 243w, assets/images/guru-paduka--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/guru-paduka--ultra-small.jpg 174w, assets/images/guru-paduka--ultra-small--2x.jpg 348w" alt="Guru Paduka" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Guru Paduka</h3>
+                        <p class="product-card__price">&#8377;1800/-</p>
+                    </div>
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/kumud--small.jpg 348w, assets/images/kumud--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/kumud--extra-small.jpg 243w, assets/images/kumud--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/kumud--ultra-small.jpg 174w, assets/images/kumud--ultra-small--2x.jpg 348w" alt="Kumud" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Kumud</h3>
+                        <p class="product-card__price">&#8377;1200/-</p>
+                    </div>
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/prakriti--small.jpg 348w, assets/images/prakriti--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/prakriti--extra-small.jpg 243w, assets/images/prakriti--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/prakriti--ultra-small.jpg 174w, assets/images/prakriti--ultra-small--2x.jpg 348w" alt="Prakriti" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Prakriti</h3>
+                        <p class="product-card__price">&#8377;1800/-</p>
+                    </div>
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/trinetrini--small.jpg 348w, assets/images/trinetrini--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/trinetrini--extra-small.jpg 243w, assets/images/trinetrini--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/trinetrini--ultra-small.jpg 174w, assets/images/trinetrini--ultra-small--2x.jpg 348w" alt="Trinetrini" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Trinetrini</h3>
+                        <p class="product-card__price">&#8377;1200/-</p>
+                    </div>
+                </div>
+            </div>
+            <div id="prints" class="tab__content__pane tab__content__pane--show" role="tabpanel" aria-labelledby="printsTab">
+                <div class="row row--smallscreen-2-column row--mediumscreen-3-column row--extralargescreen-4-column">
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/trinetrini--small.jpg 348w, assets/images/trinetrini--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/trinetrini--extra-small.jpg 243w, assets/images/trinetrini--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/trinetrini--ultra-small.jpg 174w, assets/images/trinetrini--ultra-small--2x.jpg 348w" alt="Trinetrini" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Trinetrini</h3>
+                        <p class="product-card__price">&#8377;1200/-</p>
+                    </div>
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/prakriti--small.jpg 348w, assets/images/prakriti--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/prakriti--extra-small.jpg 243w, assets/images/prakriti--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/prakriti--ultra-small.jpg 174w, assets/images/prakriti--ultra-small--2x.jpg 348w" alt="Prakriti" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Prakriti</h3>
+                        <p class="product-card__price">&#8377;1800/-</p>
+                    </div>
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/kumud--small.jpg 348w, assets/images/kumud--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/kumud--extra-small.jpg 243w, assets/images/kumud--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/kumud--ultra-small.jpg 174w, assets/images/kumud--ultra-small--2x.jpg 348w" alt="Kumud" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Kumud</h3>
+                        <p class="product-card__price">&#8377;1200/-</p>
+                    </div>
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/guru-paduka--small.jpg 348w, assets/images/guru-paduka--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/guru-paduka--extra-small.jpg 243w, assets/images/guru-paduka--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/guru-paduka--ultra-small.jpg 174w, assets/images/guru-paduka--ultra-small--2x.jpg 348w" alt="Guru Paduka" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Guru Paduka</h3>
+                        <p class="product-card__price">&#8377;1800/-</p>
+                    </div>
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/guru-paduka--small.jpg 348w, assets/images/guru-paduka--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/guru-paduka--extra-small.jpg 243w, assets/images/guru-paduka--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/guru-paduka--ultra-small.jpg 174w, assets/images/guru-paduka--ultra-small--2x.jpg 348w" alt="Guru Paduka" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Guru Paduka</h3>
+                        <p class="product-card__price">&#8377;1800/-</p>
+                    </div>
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/guru-paduka--small.jpg 348w, assets/images/guru-paduka--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/guru-paduka--extra-small.jpg 243w, assets/images/guru-paduka--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/guru-paduka--ultra-small.jpg 174w, assets/images/guru-paduka--ultra-small--2x.jpg 348w" alt="Guru Paduka" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Guru Paduka</h3>
+                        <p class="product-card__price">&#8377;1800/-</p>
+                    </div>
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/guru-paduka--small.jpg 348w, assets/images/guru-paduka--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/guru-paduka--extra-small.jpg 243w, assets/images/guru-paduka--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/guru-paduka--ultra-small.jpg 174w, assets/images/guru-paduka--ultra-small--2x.jpg 348w" alt="Guru Paduka" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Guru Paduka</h3>
+                        <p class="product-card__price">&#8377;1800/-</p>
+                    </div>
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/guru-paduka--small.jpg 348w, assets/images/guru-paduka--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/guru-paduka--extra-small.jpg 243w, assets/images/guru-paduka--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/guru-paduka--ultra-small.jpg 174w, assets/images/guru-paduka--ultra-small--2x.jpg 348w" alt="Guru Paduka" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Guru Paduka</h3>
+                        <p class="product-card__price">&#8377;1800/-</p>
+                    </div>
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/guru-paduka--small.jpg 348w, assets/images/guru-paduka--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/guru-paduka--extra-small.jpg 243w, assets/images/guru-paduka--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/guru-paduka--ultra-small.jpg 174w, assets/images/guru-paduka--ultra-small--2x.jpg 348w" alt="Guru Paduka" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Guru Paduka</h3>
+                        <p class="product-card__price">&#8377;1800/-</p>
+                    </div>
+                </div>
+            </div>
+            <div id="downloads" class="tab__content__pane" role="tabpanel" aria-labelledby="downloadsTab">
+                <div class="row row--smallscreen-2-column row--mediumscreen-3-column row--extralargescreen-4-column">
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/trinetrini--small.jpg 348w, assets/images/trinetrini--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/trinetrini--extra-small.jpg 243w, assets/images/trinetrini--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/trinetrini--ultra-small.jpg 174w, assets/images/trinetrini--ultra-small--2x.jpg 348w" alt="Trinetrini" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Trinetrini</h3>
+                        <p class="product-card__price">&#8377;1200/-</p>
+                    </div>
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/prakriti--small.jpg 348w, assets/images/prakriti--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/prakriti--extra-small.jpg 243w, assets/images/prakriti--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/prakriti--ultra-small.jpg 174w, assets/images/prakriti--ultra-small--2x.jpg 348w" alt="Prakriti" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Prakriti</h3>
+                        <p class="product-card__price">&#8377;1800/-</p>
+                    </div>
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/kumud--small.jpg 348w, assets/images/kumud--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/kumud--extra-small.jpg 243w, assets/images/kumud--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/kumud--ultra-small.jpg 174w, assets/images/kumud--ultra-small--2x.jpg 348w" alt="Kumud" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Kumud</h3>
+                        <p class="product-card__price">&#8377;1200/-</p>
+                    </div>
+                    <div class="product-card">
+                        <picture>
+                            <source sizes="348px" data-srcset="assets/images/guru-paduka--small.jpg 348w, assets/images/guru-paduka--small--2x.jpg 696w" media="(min-width: 558px)">
+                            <source sizes="243px" data-srcset="assets/images/guru-paduka--extra-small.jpg 243w, assets/images/guru-paduka--extra-small--2x.jpg 486w" media="(min-width: 415px)">
+                            <img class="lazyload" sizes="174px" data-srcset="assets/images/guru-paduka--ultra-small.jpg 174w, assets/images/guru-paduka--ultra-small--2x.jpg 348w" alt="Guru Paduka" width="148" height="148">
+                        </picture>
+                        <h3 class="product-card__title">Guru Paduka</h3>
+                        <p class="product-card__price">&#8377;1800/-</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="site-footer wrapper wrapper--horizontal-center-children">

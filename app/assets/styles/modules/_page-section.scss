@@ -20,6 +20,30 @@
     }
 
     &--b-margin-only {
-        margin: 0 0 16px 0;
+        margin: 0 auto 16px auto;
+
+        @include smallScreen {
+            margin: 0 auto 24px auto;
+        }
+
+        @include extraLargeScreen {
+            margin: 0 auto 32px auto;
+        }
+    }
+
+    &--b-large-margin-only {
+        margin: 0 auto 41px auto;
+
+        @include smallScreen {
+            margin: 0 auto 60px auto;
+        }
+
+        @include mediumScreen {
+            margin: 0 auto 80px auto;
+        }
+
+        @include largeScreen {
+            margin: 0 auto 100px auto;
+        }
     }
 }

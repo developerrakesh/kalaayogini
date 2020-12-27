@@ -5,7 +5,6 @@
     background-color: $primaryUltraLightColor;
     padding-bottom: 10px;
     max-width: 325px;
-    width: 44vw;
     cursor: pointer;
 
     @include smallScreen {
@@ -16,11 +15,12 @@
         padding-bottom: 22px;
     }
 
-    &:nth-last-of-type(1) {
+    &--hide-smallscreen {
         display: none;
 
         @include mediumScreen {
             display: inline-block;
+            margin-right: 0;
         }
     }
 

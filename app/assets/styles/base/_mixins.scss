@@ -1,3 +1,9 @@
+@mixin extraSmallScreen {
+    @media (min-width: 415px) {
+        @content;
+    }
+}
+
 @mixin smallScreen {
     @media (min-width: 558px) {
         @content;
@@ -18,6 +24,18 @@
 
 @mixin largeScreen {
     @media (min-width: 950px) {
+        @content;
+    }
+}
+
+@mixin extraLargeScreen {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin superLargeScreen {
+    @media (min-width: 1800px) {
         @content;
     }
 }

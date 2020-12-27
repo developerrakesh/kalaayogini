@@ -1,10 +1,95 @@
 .row {
     display: flex;
-    gap: 4.5vw;
     max-width: 950px;
+    width: auto;
     margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: -4.5vw;
 
     @include mediumScreen {
-        gap: 3vw;
+        margin-bottom: -3vw;
+    }
+
+    @include extraLargeScreen {
+        margin-bottom: -30px;
+    }
+
+    &--smallscreen-2-column {
+
+        > div {
+            width: 40vw;
+            margin-right: 4.5vw;
+            margin-bottom: 4.5vw;
+
+            @include extraSmallScreen {
+                width: 40vw;
+            }
+
+            &:nth-of-type(even) {
+                margin-right: 0;
+            }
+        }
+
+    }
+
+    &--mediumscreen-3-column {
+
+        > div {
+
+            @include mediumScreen {
+                margin-right: 3vw;
+                margin-bottom: 3vw;
+                width: 26vw;
+
+                &:nth-of-type(even) {
+                    margin-right: 3vw;
+                }
+    
+                &:nth-of-type(3n+0) {
+                    margin-right: 0;
+                }
+            }
+
+            @include largeScreen {
+                width: 24vw;
+                max-width: 290px;
+            }
+        }
+    }
+
+    &--extralargescreen-4-column {
+        max-width: none;
+
+        > div {
+
+            @include extraLargeScreen {
+                width: 17vw;
+                max-width: 235px;
+                margin-right: 30px;
+                margin-bottom: 30px;
+
+                &:nth-of-type(3n+0) {
+                    margin-right: 30px;
+                }
+
+                &:nth-of-type(even) {
+                    margin-right: 30px;
+                }
+
+                &:nth-of-type(4n+0) {
+                    margin-right: 0;
+                }
+            }
+
+            @include superLargeScreen {
+                width: 15vw;
+                max-width: 220px;
+            }
+        }
+    }
+
+    > div:nth-last-of-type(1) {
+        margin-right: 0;
     }
 }

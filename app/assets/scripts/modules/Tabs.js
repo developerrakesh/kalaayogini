@@ -1,7 +1,7 @@
 class Tabs {
     constructor() {
-        console.log('tabs here');
         this.tabHeadings = document.querySelectorAll('.tab__header__title');
+        this.tabPanes = document.querySelectorAll('.tab__content__pane');
         this.events();
     }
 
@@ -9,14 +9,22 @@ class Tabs {
         this.tabHeadings.forEach( tabHeading => {
             tabHeading.addEventListener('click', evt => {
                 evt.preventDefault();
-                //to remove active class from all tabheadings
+
+                //to remove active class from all tab headings
                 this.tabHeadings.forEach( el => {
                     el.classList.remove('active');
                 });
-                //to add active class to the clicked tabheading
+
+                //to add active class to the clicked tab heading
                 evt.target.className += ' active';
-                console.log(evt.target.getAttribute("href"));
-                console.log(evt.target.dataset.test);
+
+                //to remove tab__content__pane--show class from all tab panes
+                this.tabPanes.forEach( el => {
+                    el.classList.remove('tab__content__pane--show');
+                });
+
+                //to add tab__content__pane--show class to tab pane controlled by corresponding tab heading
+                document.querySelector(evt.target.getAttribute("href")).classList.add('tab__content__pane--show');
             });
         });
     }

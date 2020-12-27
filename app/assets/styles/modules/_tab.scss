@@ -2,22 +2,31 @@
     margin-top: ($headerHeightSmall + 16px);
     
     @include smallScreen {
-        margin-top: $headerHeightMedium;
+        margin-top: ($headerHeightMedium + 24px);
     }
     
     @include largeScreen {
-        margin-top: $headerHeightLarge;
+        margin-top: ($headerHeightLarge + 24px);
     }
-    
+
+    @include extraLargeScreen {
+        margin-top: ($headerHeightLarge + 32px);
+    }
     
     &__header {
         list-style: none;
         display: flex;
-        gap: 24px;
         justify-content: center;
+
+        &
         
         &__li {
             display: inline-block;
+            margin-right: 24px;
+
+            &:nth-last-of-type(1) {
+                margin-right: 0;
+            }
         }
         
         &__title {
@@ -29,10 +38,24 @@
             border-radius: 4px;
             padding: 0 12px;
             transition: all $duration ease-out;
+            letter-spacing: .2px;
+            text-transform: uppercase;
 
             &.active {
                 color: $primaryDarkColor;
                 background-color: $primaryLightColor;
+            }
+
+            @include smallScreen {
+                font-size: (14rem / 16);
+                line-height: 39px;
+                padding: 0 14px;
+            }
+
+            @include extraLargeScreen {
+                font-size: (18rem / 16);
+                padding: 0 16px;
+                line-height: 45px;
             }
         }
     }
@@ -40,8 +63,14 @@
     &__content {
 
         &__pane {
+            display: none;
             opacity: 0;
-            pointer-events: none;
+            transition: all $duration ease-out;
+
+            &--show {
+                display: block;
+                opacity: 1;
+            }
         }
     }
 }
