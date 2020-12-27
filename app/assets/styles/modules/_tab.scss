@@ -44,6 +44,7 @@
             &.active {
                 color: $primaryDarkColor;
                 background-color: $primaryLightColor;
+                cursor: default;
             }
 
             @include smallScreen {
@@ -61,15 +62,20 @@
     }
 
     &__content {
+        position: relative;
 
         &__pane {
-            display: none;
+            left: 0;
+            right: 0;
+            position: fixed;
             opacity: 0;
-            transition: all $duration ease-out;
+            transition: all $longDuration ease-out;
+            pointer-events: none;
 
             &--show {
-                display: block;
                 opacity: 1;
+                position: relative;
+                pointer-events: all;
             }
         }
     }
