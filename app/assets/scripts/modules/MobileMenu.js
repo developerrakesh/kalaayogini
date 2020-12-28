@@ -27,22 +27,30 @@ class MobileMenu {
         }
     }
 
+    testNavClick(evt) {
+        //to check if nav menu is clicked or not
+        if(!(evt.target.matches('.site-header__menu-icon') || evt.target.matches('.site-header__nav') || evt.target.matches('.site-header__nav ul') || evt.target.matches('.site-header__nav li') || evt.target.matches('.site-header__nav a') || evt.target.matches('.site-header__nav__toggle-btn'))) {
+            this.closeNav();
+        }
+    }
+
     events() {
         this.menuIcon.addEventListener('click', () => {
             this.showNav();
         });
+
         this.changeNavPosition();
+
         document.addEventListener('click', evt => {
-            //to check if nav menu is clicked or not
-            if(!(evt.target.matches('.site-header__menu-icon') || evt.target.matches('.site-header__nav') || evt.target.matches('.site-header__nav ul') || evt.target.matches('.site-header__nav li') || evt.target.matches('.site-header__nav a') || evt.target.matches('.site-header__nav__toggle-btn'))) {
-                this.closeNav();
-            }
+            this.testNavClick(evt);
         });
+
         window.addEventListener('keyup', evt => {
             if(evt.keyCode == 27) {
                 this.closeNav();
             }
         });
+
         window.addEventListener('resize', debounce(() => {
             this.browserHeight = window.innerHeight;
             this.changeNavPosition();

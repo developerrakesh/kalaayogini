@@ -11,7 +11,7 @@ class Modal {
         document.body.insertAdjacentHTML('beforeend', `
         <div class="modal wrapper wrapper--center-children" aria-labelledby="contactTitle">
             <form class="modal__form">
-                <div class="modal__close" role="button" aria-label="close modal button">x</div>
+                <div class="modal__close" role="button" aria-label="close modal button">X</div>
                 <h2 class="modal__title" id="contactTitle">Contact Us</h2>
                 <p class="modal__msg">Please leave us a message and we will reach out to you.</p>
                 <fieldset class="modal__user-input">

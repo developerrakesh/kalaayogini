@@ -1,24 +1,24 @@
 .row {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: -16px;
+    margin-bottom: -$smallRowMargin;
     width: calc(var(--cardWidthSmall) * 2 + 25px);
 
     @include mediumScreen {
-        margin-bottom: -24px;
+        margin-bottom: -$rowMargin;
         width: calc(var(--cardWidthMedium) * 3 + 30px * 2);
     }
 
     @include extraLargeScreen {
-        margin-bottom: -40px;
+        margin-bottom: -$largeRowMargin;
         width: calc(var(--cardWidthLarge) * 4 + 46px * 3);
         max-width: 1200px;
     }
 
     > div {
         width: var(--cardWidthSmall);
-        margin-right: 16px;
-        margin-bottom: 16px;
+        margin-right: $smallRowMargin;
+        margin-bottom: $smallRowMargin;
 
         &:nth-of-type(even) {
             margin-right: 0;
@@ -26,11 +26,11 @@
 
         @include mediumScreen {
             width: var(--cardWidthMedium);
-            margin-right: 24px;
-            margin-bottom: 24px;
+            margin-right: $rowMargin;
+            margin-bottom: $rowMargin;
 
             &:nth-of-type(even) {
-                margin-right: 24px;
+                margin-right: $rowMargin;
             }
 
             &:nth-of-type(3n+0) {
@@ -41,15 +41,15 @@
         @include extraLargeScreen {
             width: var(--cardWidthLarge);
             max-width: 266px;
-            margin-right: 40px;
-            margin-bottom: 40px;
+            margin-right: $largeRowMargin;
+            margin-bottom: $largeRowMargin;
 
             &:nth-of-type(even) {
-                margin-right: 40px;
+                margin-right: $largeRowMargin;
             }
 
             &:nth-of-type(3n+0) {
-                margin-right: 40px;
+                margin-right: $largeRowMargin;
             }
 
             &:nth-of-type(4n+0) {

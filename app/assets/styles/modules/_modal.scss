@@ -7,7 +7,7 @@
     left: 0;
     right: 0;
     z-index: 50;
-    transition: all .3s ease-out;
+    transition: all $veryShortDuration ease-out;
     transform: scale(1.2);
 
     &--small-height-screen {
@@ -50,17 +50,17 @@
         color: $primaryDarkColor;
         top: 16px;
         right: 16px;
-        font-size: 1.3rem;
-        font-weight: bold;
+        font-size: 1.2rem;
+        font-weight: 400;
         cursor: pointer;
-        transition: transform $shortDuration ease-out;
+        transition: transform $veryShortDuration ease-out;
 
         @include mediumScreen {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
         
         @include largeScreen {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
         
         &:hover, &:focus {

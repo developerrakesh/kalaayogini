@@ -66,6 +66,7 @@
         > div {
             width: $menuIconWidthSmall;
             height: 2px;
+            border-radius: 2px;
             background-color: $primaryDarkColor;
             transition: transform .3s ease-out;
             pointer-events: none;
@@ -80,6 +81,7 @@
             display: inline-block;
             width: $menuIconWidthSmall;
             height: 2px;
+            border-radius: 2px;
             background-color: $primaryDarkColor;
             position: absolute;
             top: 0px;
@@ -97,6 +99,7 @@
             display: inline-block;
             width: $menuIconWidthSmall;
             height: 2px;
+            border-radius: 2px;
             background-color: $primaryDarkColor;
             position: absolute;
             bottom: 0px;
@@ -139,17 +142,18 @@
         right: 0;
         pointer-events: none;
         z-index: 5;
-        width: (150px + $extraSmallScreenVerticalPadding);
+        width: 179px;
         height: 241px;
         overflow-x: hidden;
 
         @include smallScreen {
             height: 334px;
-            width: 223px;
+            width: 255px;
         }
 
         @include largeScreen {
-            width: 280px;
+            width: 375px;
+            height: 370px;
         }
         
         ul {
@@ -161,6 +165,7 @@
             opacity: 0;
             pointer-events: none;
             right: -148px;
+            width: 146px;
             transition: all .3s ease-out;
             background-color: $primaryExtraLightColor;
             border-radius: 8px;
@@ -168,10 +173,12 @@
 
             @include smallScreen {
                 right: -174px;
+                width: 208px;
             }
 
             @include largeScreen {
                 right: 6vw;
+                width: 290px;
                 transform: scale(.8);
                 transition: all .2s ease-out;
             }
@@ -238,6 +245,11 @@
             @include smallScreen {
                 font-size: (24rem / 16);
                 line-height: 78px;
+            }
+
+            @include largeScreen {
+                font-size: 1.7rem;
+                line-height: 85px;
             }
         }
         
