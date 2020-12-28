@@ -44,6 +44,24 @@ h2 {
     }
 }
 
+.heading {
+
+    &--large {
+        font-size: (18rem / 16);
+        line-height: 1.5;
+        font-weight: normal;
+        color: $primaryDarkColor;
+
+        @include smallScreen {
+            font-size: (32rem / 16);
+        }
+
+        @include largeScreen {
+            font-size: (48rem / 16);
+        }
+    }
+}
+
 .b--small-margin-smallscreen-plus {
 
     @include smallScreen {
