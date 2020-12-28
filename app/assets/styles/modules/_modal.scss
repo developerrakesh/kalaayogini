@@ -53,7 +53,7 @@
         font-size: 1.3rem;
         font-weight: bold;
         cursor: pointer;
-        transition: transform .2s ease-out;
+        transition: transform $shortDuration ease-out;
 
         @include mediumScreen {
             font-size: 1.4rem;
@@ -164,7 +164,7 @@
     z-index: 25;
     top: 0;
     bottom: 0;
-    transition: all .3s ease-out;
+    transition: all $duration ease-out;
 
     &--show {
         opacity: 1;

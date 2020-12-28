@@ -13,11 +13,12 @@
     align-items: center;
     letter-spacing: .3px;
     cursor: pointer;
-    transition: all .2s ease-out;
+    transition: all $veryShortDuratino ease-out;
 
     &:hover, &:focus {
         box-shadow: 0 2px 7px 0 $primaryDarkColor;
         transform: translateY(-.2rem);
+        outline: none;
     }
 
     @include largeScreen {
