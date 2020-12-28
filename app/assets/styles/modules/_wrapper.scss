@@ -7,6 +7,10 @@
         padding: 0 $smallSreenVerticalPadding;
     }
 
+    @include extraLargeScreen {
+        padding: 0 $largeScreenVerticalPadding;
+    }
+
     &--center-children {
         display: flex;
         justify-content: center;

@@ -1,5 +1,8 @@
 :root {
     --hue: 197;
+    --cardWidthSmall: 39vw;
+    --cardWidthMedium: 25vw;
+    --cardWidthLarge: 19vw;
     transition: all 1s ease-out;
 
     &.change-hue {
@@ -29,6 +32,7 @@ $menuIconWidth: 24px;
 
 $extraSmallScreenVerticalPadding: 24px;
 $smallSreenVerticalPadding: 6vw;
+$largeScreenVerticalPadding: 25px;
 
 $veryShortDuratino: .1s;
 $shortDuration: .2s;
