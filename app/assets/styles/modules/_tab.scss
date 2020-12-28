@@ -1,17 +1,4 @@
 .tab {
-    margin-top: ($headerHeightSmall + 16px);
-    
-    @include smallScreen {
-        margin-top: ($headerHeightMedium + 24px);
-    }
-    
-    @include largeScreen {
-        margin-top: ($headerHeightLarge + 24px);
-    }
-
-    @include extraLargeScreen {
-        margin-top: ($headerHeightLarge + 32px);
-    }
     
     &__header {
         list-style: none;

@@ -25,11 +25,86 @@ h1, h2, h3, h4 {
     }
 }
 
+h1 {
+    padding-top: .5px;
+}
+
+h2 {
+    font-size: (14rem / 16);
+    font-weight: bold;
+    line-height: 1.2;
+    color: $primaryExtraDarkColor;
+
+    @include smallScreen {
+        font-size: 1rem;
+    }
+
+    @include largeScreen {
+        font-size: (18rem / 16);
+    }
+}
+
+.b--small-margin-smallscreen-plus {
+
+    @include smallScreen {
+        margin-bottom: 12px;
+    }
+
+    @include largeScreen {
+        margin-bottom: 5px;
+    }
+}
+
+p {
+    font-size: (14rem / 16);
+    font-weight: normal;
+    line-height: 1.2;
+    margin-top: 0;
+
+    @include smallScreen {
+        font-size: 1rem;
+    }
+
+    @include largeScreen {
+        font-size: (18rem / 16);
+    }
+}
+
 a {
     text-decoration: none;
     transition: color .2s ease-out;
 
     &:hover, &:focus {
         color: $hoverTextColor;
+    }
+}
+
+svg {
+    fill: $primaryDarkColor;
+}
+
+.svg {
+
+    &--large {
+        transform: scale(1.6);
+        transform-origin: 50% 0;
+        margin-bottom: 45px;
+
+        @include smallScreen {
+            transform: scale(1.85);
+            margin-bottom: 50px;
+        }
+
+        @include largeScreen {
+            transform: scale(2.7);
+            margin-top: 16px;
+            margin-bottom: 95px;
+        }
+    }
+
+    &--centered {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

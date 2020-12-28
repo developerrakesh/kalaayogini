@@ -1,49 +1,91 @@
 .page-section {
     margin-top: 16px;
     margin-bottom: 40px;
-
+    
     @include smallScreen {
         margin-top: 32px;
         margin-bottom: 65px;
     }
-
+    
     @include largeScreen {
         margin-bottom: 84px;
     }
-
+    
     &--t-margin-medium {
         margin-top: 32px;
-
+        
         @include smallScreen {
             margin-top: 48px;
         }
     }
-
+    
     &--b-margin-only {
-        margin: 0 auto 16px auto;
-
+        margin-bottom: 16px;
+        
         @include smallScreen {
-            margin: 0 auto 24px auto;
+            margin-bottom: 24px;
         }
-
+        
         @include extraLargeScreen {
-            margin: 0 auto 32px auto;
+            margin-bottom: 32px;
+        }
+    }
+    
+    &--b-large-margin-only {
+        margin-bottom: 41px;
+        
+        @include smallScreen {
+            margin-bottom: 60px;
+        }
+        
+        @include mediumScreen {
+            margin-bottom: 80px;
+        }
+        
+        @include largeScreen {
+            margin-bottom: 100px;
         }
     }
 
-    &--b-large-margin-only {
-        margin: 0 auto 41px auto;
+    &--b-margin-same {
 
         @include smallScreen {
-            margin: 0 auto 60px auto;
-        }
-
-        @include mediumScreen {
-            margin: 0 auto 80px auto;
+            margin-bottom: 40px;
         }
 
         @include largeScreen {
-            margin: 0 auto 100px auto;
+            margin-bottom: 40px;
+        }
+    }
+
+    &--b-small-margin--large-screen {
+
+        @include largeScreen {
+            margin-bottom: 28px;
+        }
+    }
+
+    &--b-extra-large-margin-only {
+        margin-bottom: 80px;
+
+        @include smallScreen {
+            margin-bottom: 170px;
+        }
+    }
+
+    &--t-margin-only {
+        margin-top: ($headerHeightSmall + 16px);
+        
+        @include smallScreen {
+            margin-top: ($headerHeightMedium + 24px);
+        }
+        
+        @include largeScreen {
+            margin-top: ($headerHeightLarge + 24px);
+        }
+        
+        @include extraLargeScreen {
+            margin-top: ($headerHeightLarge + 32px);
         }
     }
 }

@@ -2,8 +2,11 @@ https://www.figma.com/file/6cMY37vnb8ulZQ4Rmso9PB/Kalaayogini?node-id=0%3A1
 
 todo
 
+product detail page
+
 contact form submit button should be in disabled mode and only become active after required field is filled.
-sanitize user input from contact form before sending it to backend.
+sanitize & validate user input from contact form before sending it to backend.
+validate & sanitize in backend also
 notify author once message is sent from client.
 show thank you pop up, after got successfully delivered.
 
@@ -18,7 +21,6 @@ integrate payment method
 explore image resizing automation
 
 make author admin dashboard
-
 
 //learning notes
 evt.target don't have classlist so use className
