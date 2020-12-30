@@ -6,6 +6,7 @@ class RevealOnScroll {
         this.tabHeadings = document.querySelectorAll('.tab__header__title');
         this.browserHeight = window.innerHeight;
         this.top;
+        //to show top placed arts initially
         this.arts.forEach( art => {
             this.top = art.getBoundingClientRect().top;
             this.showArt(art, this.top);
@@ -16,9 +17,7 @@ class RevealOnScroll {
     showArt(art, top) {
         let scrollPercent;
         scrollPercent = top/this.browserHeight * 100;
-        console.log(scrollPercent);
         if(scrollPercent < 70) {
-            console.log(art);
             art.classList.add('product-card--show');
         }
     }

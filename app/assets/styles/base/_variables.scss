@@ -3,7 +3,7 @@
     --cardWidthSmall: 39vw;
     --cardWidthMedium: 25vw;
     --cardWidthLarge: 19vw;
-    transition: all 1s ease-out;
+    transition: color 1s ease-out;
 
     &.change-hue {
         --hue: 360;

@@ -7,7 +7,7 @@
     max-width: 325px;
     opacity: 0;
     transform: scale(1.2);
-    transition: all $longDuration ease-out;
+    transition: transform $longDuration ease-out, opacity $longDuration ease-out;
 
     &--show {
         opacity: 1;

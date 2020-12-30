@@ -7,7 +7,7 @@
     left: 0;
     right: 0;
     z-index: 50;
-    transition: all $veryShortDuration ease-out;
+    transition: transform $veryShortDuration ease-out;
     transform: scale(1.2);
 
     &--small-height-screen {
@@ -111,7 +111,7 @@
         background-color: $primaryLightColor;
         padding: 15px 16px 16px;
         font-size: (14rem / 16);
-        transition: all .2s ease-out;
+        transition: box-shadow .2s ease-out;
         width: 100%;
         
         @include largeScreen {
@@ -164,7 +164,7 @@
     z-index: 25;
     top: 0;
     bottom: 0;
-    transition: all $duration ease-out;
+    transition: opacity $duration ease-out;
 
     &--show {
         opacity: 1;
