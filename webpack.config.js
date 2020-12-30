@@ -20,7 +20,7 @@ let pages = fse.readdirSync('./app').filter(page => {
 }).map(page => {
     return new HtmlWebpackPlugin({
         filename: page,
-        scriptLoading: 'defer',
+        scriptLoading: 'defer', 
         template: `./app/${page}`
     })
 });

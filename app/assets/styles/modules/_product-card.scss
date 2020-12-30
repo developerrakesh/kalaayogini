@@ -5,6 +5,14 @@
     background-color: $primaryUltraLightColor;
     padding-bottom: 10px;
     max-width: 325px;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all $longDuration ease-out;
+
+    &--show {
+        opacity: 1;
+        transform: scale(1);
+    }
 
     @include smallScreen {
         padding-bottom: 14px;

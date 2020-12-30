@@ -3,10 +3,14 @@ import 'lazysizes';
 import MobileMenu from './modules/MobileMenu';
 import ThemeChanger from './modules/ThemeChanger';
 import Tabs from './modules/Tabs';
+import HeaderScroll from './modules/HeaderScroll';
+import RevealOnScroll from './modules/RevealOnScroll';
 
 new MobileMenu();
 new ThemeChanger();
 new Tabs();
+new HeaderScroll();
+new RevealOnScroll();
 const contactBtns = document.querySelectorAll('.contact-btn');
 
 let modal;
