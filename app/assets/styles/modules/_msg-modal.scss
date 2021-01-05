@@ -1,0 +1,73 @@
+.msg-modal {
+    font-family: 'Quicksand', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: $primaryExtraLightColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 450px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, .16);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform $longDuration ease-out, opacity $longDuration ease-out;
+
+    @include smallScreen {
+        width: 80%;
+    }
+
+    &--show {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(1.5 * $headerHeightSmall);
+
+        @include smallScreen {
+            transform: translateY(1.5 * $headerHeightMedium);
+        }
+
+        @include largeScreen {
+            transform: translateY(1.5 * $headerHeightLarge);
+        }
+    }
+
+    &__title {
+        color: $primaryExtraDarkColor;
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: normal;
+
+        @include smallScreen {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        color: $primaryDarkColor;
+        top: 3px;
+        right: 3px;
+        font-size: 1rem;
+        font-weight: 400;
+        cursor: pointer;
+        background: none;
+        border: none;
+        transition: transform $veryShortDuration ease-out;
+
+        @include smallScreen {
+            top: 5px;
+            right: 5px;
+            font-size: 1.1rem;
+        }
+
+        &:hover, &:focus {
+            outline: none;
+            transform: scale(1.2);
+        }
+    }
+}

@@ -1,6 +1,6 @@
 import debounce from 'lodash/debounce';
 
-class Modal {
+class ContactModal {
     constructor() {
         this.insertModal();
         this.browserHeight = window.innerHeight;
@@ -73,4 +73,4 @@ class Modal {
     }
 }
 
-export default Modal;
+export default ContactModal;
