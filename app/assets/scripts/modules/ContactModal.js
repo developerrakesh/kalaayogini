@@ -43,6 +43,11 @@ class ContactModal {
         }
     }
 
+    closeModal() {
+        document.querySelector('.modal').classList.remove('modal--show');
+        document.querySelector('.modal-overlay').classList.remove('modal-overlay--show');
+    }
+
     openModal() {
         document.querySelector('.modal').classList.add('modal--show');
         document.querySelector('.modal-overlay').classList.add('modal-overlay--show');
@@ -65,11 +70,6 @@ class ContactModal {
             this.browserWidth = window.innerWidth;
             this.changeModalPosition();
         }, 300));
-    }
-
-    closeModal() {
-        document.querySelector('.modal').classList.remove('modal--show');
-        document.querySelector('.modal-overlay').classList.remove('modal-overlay--show');
     }
 }
 

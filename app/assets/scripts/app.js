@@ -5,9 +5,7 @@ import ThemeChanger from './modules/ThemeChanger';
 import Tabs from './modules/Tabs';
 import HeaderScroll from './modules/HeaderScroll';
 import RevealOnScroll from './modules/RevealOnScroll';
-//import MsgModal from './modules/MsgModal';
 
-//new MsgModal();
 new MobileMenu();
 new ThemeChanger();
 new Tabs();
