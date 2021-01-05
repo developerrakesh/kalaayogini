@@ -7,37 +7,41 @@ class RevealOnScroll {
         this.browserHeight = window.innerHeight;
         this.top;
         //to show top placed arts initially
-        this.arts.forEach( art => {
+        this.arts.forEach((art, index, arr) => {
             this.top = art.getBoundingClientRect().top;
-            this.showArt(art, this.top);
+            this.showArt(art, index, arr, this.top);
         });
+
+        this.scrollThrottle = throttle(this.calc, 50).bind(this);
         this.events();
     }
-
-    showArt(art, top) {
+    
+    showArt(art, index, arr, top) {
         let scrollPercent;
         scrollPercent = top/this.browserHeight * 100;
         if(scrollPercent < 70) {
             art.classList.add('product-card--show');
+            if(index === arr.length - 1) {
+                window.removeEventListener('scroll', this.scrollThrottle);
+            }
         }
     }
-
+    
+    calc() {
+        this.arts.forEach((art, index, arr) => {
+            this.top = art.getBoundingClientRect().top;
+            this.showArt(art, index, arr, this.top);
+        });
+    }
+    
     events() {
         this.tabHeadings.forEach( el => {
             el.addEventListener('click', () => {
-                this.arts.forEach( art => {
-                    this.top = art.getBoundingClientRect().top;
-                    this.showArt(art, this.top);
-                });
+                this.calc();
             });
         });
-
-        window.addEventListener('scroll', throttle(() => {
-            this.arts.forEach( art => {
-                this.top = art.getBoundingClientRect().top;
-                this.showArt(art, this.top);
-            });
-        }, 50));
+        
+        window.addEventListener('scroll', this.scrollThrottle);
     }
 }
 
