@@ -1,6 +1,6 @@
 **Project Highlights**
- *High performance Site*
- *Best Practices incorporated*
+1. *High performance Site*
+2. *Best Practices incorporated*
 3. *Seo and Accessibility optimized (check lighthouse audit)*
 4. *Optimized image sizes for different screen widths for faster load time*
 5. *High dp images automatically fed for high dpi screens*
